@@ -14,12 +14,14 @@ struct st
 int random (int i1, int i2)
 {
 	st aaa;
+
 	srand(time(nullptr));
+
 	if (aaa.cArr[i1][i2] == 0 )
-	{
-	cout << "weee: " << endl;
-	
+	{	
 	int i1 = rand() % 3, i2 = rand() % 3;
+
+	cout << i1 <<"______" << i2 << endl;
 
 	flag1 = &i1; flag2 = &i2;
 	}
@@ -62,8 +64,10 @@ int main()
 	
 	int i1 = rand() % 3, i2 = rand() % 3;
 
-	random (i1, i2);
+	cout << i1 << "______" << i2 << endl << endl;
 
-	cout << *flag1 << *flag2 << endl;
+	random(i1, i2);
+
+	return 0;
 }
 
